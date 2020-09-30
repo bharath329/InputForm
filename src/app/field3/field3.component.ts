@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 <input #textbox type = "text" [(ngModel)]="name3" [disabled] ="disabledInput" >
 
 
-  {{textbox.value}}
+   {{c}}
   
 ` ,
   styleUrls: ['./field3.component.css']
@@ -26,6 +26,8 @@ export class Field3Component implements OnInit {
 
   public disabledInput = false;
 
+  public c = "";
+
   
 
   
@@ -38,6 +40,7 @@ onClick(){
 
   if(this.name3){
     this.disabledInput=true;
+    this.c=this.name3;
   }
 
   
